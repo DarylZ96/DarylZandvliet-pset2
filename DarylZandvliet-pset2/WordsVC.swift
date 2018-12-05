@@ -10,11 +10,9 @@ import UIKit
 
 class WordsVC: UIViewController {
     
-    
     var story: Story!
     var chosenStory: String?
     var result: NSAttributedString?
-    
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
@@ -61,41 +59,28 @@ class WordsVC: UIViewController {
     @IBAction func saveTextToVar(sender: UIButton) {
         
         if textField.text == ""{
-            
             let alert = UIAlertController(title: "Please fill in a word", message: "You need to fill in a word to complete your story.", preferredStyle: .alert)
-            
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            
             self.present(alert, animated: true)
-            
-           
         }
         
         else {
         
-        if story.remainingPlaceholders < 2 {
-            
-            let userWord : String! = textField.text
-            
-            story.fillInPlaceholder(word: userWord)
-            result = story.attributedText
-            
-            performSegue(withIdentifier: "showResultSegue", sender: self)
-        }
+            if story.remainingPlaceholders < 2 {
+                let userWord : String! = textField.text
+                story.fillInPlaceholder(word: userWord)
+                result = story.attributedText
+                performSegue(withIdentifier: "showResultSegue", sender: self)
+            }
         
-        else {
-        
-        let userWord : String! = textField.text
+            else {
             
-        story.fillInPlaceholder(word: userWord)
-        
-        updateTextSuggestion()
-            
-        updateLabel()
-        
-        textField.text = ""
-            
-        }
+                let userWord : String! = textField.text
+                story.fillInPlaceholder(word: userWord)
+                updateTextSuggestion()
+                updateLabel()
+                textField.text = ""
+            }
         }
 
     }

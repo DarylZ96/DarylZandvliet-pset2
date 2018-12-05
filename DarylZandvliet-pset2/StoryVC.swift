@@ -13,17 +13,13 @@ class StoryVC: UIViewController {
     //Outlet section
    
     @IBOutlet weak var topic: UIStackView!
-
-    
     @IBOutlet weak var simpleButton: UIButton!
     @IBOutlet weak var tarzanButton: UIButton!
     @IBOutlet weak var universityButton: UIButton!
     @IBOutlet weak var dancingButton: UIButton!
     @IBOutlet weak var clothesButton: UIButton!
     
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +27,7 @@ class StoryVC: UIViewController {
     }
     
 
+    // Story names
     
     enum Stories: String {
         
@@ -50,14 +47,16 @@ class StoryVC: UIViewController {
     
     var storyChoice = ""
    
+    // append the story names to the empty variable
+    
     @IBAction func topicAnswerPressed(_ sender: UIButton) {
         switch sender {
             case simpleButton:
                 storyChoice.append(Stories.simple.rawValue)
             case tarzanButton:
                 storyChoice.append(Stories.tarzan.rawValue)
-        case universityButton:
-            storyChoice.append(Stories.university.rawValue)
+            case universityButton:
+                storyChoice.append(Stories.university.rawValue)
             case dancingButton:
                 storyChoice.append(Stories.dance.rawValue)
             case clothesButton:
@@ -70,15 +69,12 @@ class StoryVC: UIViewController {
 
     }
 
+    // send the data to the WordsVC
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let receiver = segue.destination as! WordsVC
         receiver.chosenStory = storyChoice
-
-      
-    
     }
-    
-    
     
     @IBAction func unwindToStory(segue: UIStoryboardSegue) {
         storyChoice = ""
