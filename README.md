@@ -21,7 +21,7 @@ An alert pops up when an user did not fill in a word. After filling in the requi
 
 ![StartScreenR](/doc/StartScreenR.png)
 
-![TopicScreen]R(/doc/TopicScreenR.png)
+![TopicScreenR](/doc/TopicScreenR.png)
 
 ![WordScreenR](/doc/WordScreenR.png)
 
