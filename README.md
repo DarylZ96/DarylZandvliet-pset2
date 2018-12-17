@@ -5,11 +5,9 @@ The Mad Libs app will let you create your own story by filling in several words.
 
 ### Some screenshots of the portrait mode
 
-![StartScreen](/doc/StartScreen.png) ![TopicScreen](/doc/TopicScreen.png)
+![StartScreen](/doc/StartScreen.png) ![TopicScreen](/doc/TopicScreen.png) ![WordScreen](/doc/WordScreen.png)
 
-![WordScreen](/doc/WordScreen.png) ![WordScreen2](/doc/WordScreen2.png)
-
-![ResultScreen](/doc/ResultScreen.png)
+![WordScreen2](/doc/WordScreen2.png) ![ResultScreen](/doc/ResultScreen.png)
 
 
 ### Some screenshots of the landscape mode
